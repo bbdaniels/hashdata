@@ -22,9 +22,10 @@ entirely within (public) Git-friendly tracking.
 
 {p}{cmd:hashdata} will load the data from the storage location.
 It will then use {help datasignature} to check it against a stored .dtasig,
-which much live at the target location and have the same name.
-If there is a mismatch, the command will report this and quit.
-The {bf:reset} option allows the data signature to be overwritten.
+which must live at the target location and have the same name.
+If there is a mismatch, the command will report this and terminate.{p_end}
+
+{p}The {bf:reset} option allows the data signature to be overwritten.
 The {bf:replace} option allows the target data file to be overwritten.
 The data file will be saved at the target location if the datasignature matches
 or if {bf:reset} and {bf:replace} are both specified.

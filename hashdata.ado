@@ -1,4 +1,5 @@
 // Program to ger new data or check hash of old data
+version 13
 
 cap prog drop hashdata
 prog def hashdata

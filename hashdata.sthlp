@@ -14,13 +14,13 @@ entirely within (public) Git-friendly tracking.
 
 {title:Syntax}
 
-{phang}{cmd:hashdata} {it:"/data/storage/location.dta"}
+{phang}{cmd:hashdata} [{it:"/data/storage/location.dta"}]
 {break}	{help using} {it:"/data/target/location.dta"} ,
 {break} [reset] [replace] {p_end}
 
 {title:Instructions}
 
-{p}{cmd:hashdata} will load the data from the storage location.
+{p}{cmd:hashdata} will load the data from the storage location if specified.
 It will then use {help datasignature} to check it against a stored .dtasig,
 which must live at the target location and have the same name.
 If there is a mismatch, the command will report this and terminate.{p_end}

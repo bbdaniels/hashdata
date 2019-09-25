@@ -5,7 +5,7 @@ cap prog drop hashdata
 prog def hashdata
 
   syntax ///
-    anything   /// Location of the original DTA file
+    [anything]   /// Location of the original DTA file
     using/     /// Location of the desired datafile placement
   , ///
     [replace]  /// replace DTA-file
@@ -15,7 +15,7 @@ prog def hashdata
 preserve // Respect current data
 
 // Load target data
-use `anything' , clear
+if `"`anything'"' != `""' use `anything' , clear
 
 // Check existing hash, if any
 cap datasignature confirm  using "`using'sig" , strict
